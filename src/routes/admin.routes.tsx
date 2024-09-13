@@ -4,6 +4,7 @@ import CreateAdmin from "../pages/admin/CreateAdmin";
 import CreateFaculty from "../pages/admin/CreateFaculty";
 import CreateStudent from "../pages/admin/CreateStudent";
 import { NavLink } from "react-router-dom";
+import AcademicManagement from "../pages/admin/AcademicManagement";
 
 
 
@@ -18,6 +19,17 @@ export const adminPaths = [
         name : 'Dashboard',
         path : 'dashboard',
         element : <AdminDashboard/>
+    },
+    {
+        name : 'Academic Management',
+        path : 'academic-semesters',
+        children : [
+            {
+                name : 'Academic Semester',
+                path : 'academic-semesters',
+                element : <AcademicManagement/>
+            }
+        ]
     },
     {
         name : 'User Management',
